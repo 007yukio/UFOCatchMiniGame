@@ -25,7 +25,7 @@ function startGame() {
 
 function generateFlies() {
   const gameArea = document.getElementById("game-area");
-  const fliesToGenerate = Math.floor(Math.random() * 8) + 3; // 3～10匹のランダムな数
+  const fliesToGenerate = Math.floor(Math.random() * 8) + 3; // 3～10のランダムな数
 
   for (let i = 0; i < fliesToGenerate; i++) {
     const fly = document.createElement("div");
@@ -40,7 +40,7 @@ function generateFlies() {
       document.getElementById("score-count").textContent = score;
       gameArea.removeChild(fly);
       if (document.querySelectorAll(".fly").length === 0 && timeLeft > 0) {
-        setTimeout(generateNewFlies, 500); // ハエが全て消えた後に新しいハエを生成
+        setTimeout(generateNewFlies, 500); // UFOが全て消えた後に新しいUFOを生成
       }
     });
 
@@ -49,7 +49,7 @@ function generateFlies() {
 }
 
 function generateNewFlies() {
-  const fliesToGenerate = Math.floor(Math.random() * 10) + 1; // 1～10匹のランダムな数
+  const fliesToGenerate = Math.floor(Math.random() * 10) + 1; // 1～10のランダムな数
   generateFlies(fliesToGenerate);
 }
 
@@ -69,7 +69,7 @@ document.getElementById("game-area").addEventListener("click", (e) => {
   if (e.target.classList.contains("fly")) {
     document.getElementById("game-area").removeChild(e.target);
     if (document.querySelectorAll(".fly").length === 0 && timeLeft > 0) {
-      setTimeout(generateNewFlies, 500); // ハエが全て消えた後に新しいハエを生成
+      setTimeout(generateNewFlies, 500); // UFOが全て消えた後に新しいUFOを生成
     }
   }
 });
