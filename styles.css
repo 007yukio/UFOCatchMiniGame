@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.game-area {
+    width: 600px;
+    height: 400px;
+    background: url('https://www.solarsystemscope.com/textures/download/8k_stars_milky_way.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+.fly {
+    width: 40px;
+    height: 40px;
+    background-image: url('ufo_01_gray.png');
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.5s, top 0.5s, left 0.5s;
+}
