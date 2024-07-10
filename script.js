@@ -15,7 +15,7 @@ function startGame() {
     if (timeLeft <= 0) {
       clearInterval(timer);
       clearInterval(moveFlyTimer);
-      alert("ゲーム終了! あなたのスコアは " + score + " です。");
+      alert("ゲーム終了! あなたのスコアは " + score + " です。F5で再開");
     }
   }, 1000);
 
